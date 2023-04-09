@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+
+<script>
+ /* componentDidMount() {
+     fetch('/fet1.txt')
+     .then(res => res.json())
+     .then((data) => {
+        console.log(data)
+    // });
+  } */
+
+
+async function getText(file) {
+
+const response = await fetch(file);
+const content = await response.blob();
+
+console.log('content.size ',content.size);
+
+ // document.getElementById("textFetch").innerHTML = y;
+ 
+}
+
+// getText("/fet1.txt");
+
+
+</script>
+
+<button id="but1" onclick="getText('/fet1.txt')">click me</>
+ <p> par </>
+  
+  <h2> js fetch test / text file   </>
+  
+  <div id='textFetch'>
+     <i> the text file will go here </i>
+  </div>
+
+</body>
+
+</html>
